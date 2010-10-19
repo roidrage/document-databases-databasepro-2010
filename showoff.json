@@ -3,6 +3,7 @@
   "sections": [
     {"section": "01_intro"},
     {"section": "02_couchdb_und_das_web"},
-    {"section": "03_btree"}
+    {"section": "03_btree"},
+    {"section": "04_localmost"}
   ]
 }
