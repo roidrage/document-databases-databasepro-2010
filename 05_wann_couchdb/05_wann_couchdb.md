@@ -73,3 +73,15 @@
 ## Worauf achten? ##
 
 * Regelmäßige Compaction notwendig
+
+!SLIDE
+
+# Cloud? #
+
+!SLIDE center
+
+![Cloud](replication.png)
+
+!SLIDE
+
+# Fragen? #

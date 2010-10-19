@@ -10,6 +10,10 @@
 * [@roidrage](http://twitter.com/roidrage)
 * <http://paperplanes.de>
 
+!SLIDE center
+
+<a href="http://scalarium.com"><img src="scalarium.png"></a>
+
 !SLIDE bullets incremental
 
 # Agenda #
