@@ -46,7 +46,7 @@
 
 !SLIDE
 
-## Views - Keys ##
+# Views - Keys #
 
     "Why Riak Search Matters..."
 
@@ -54,7 +54,7 @@
 
     {title: "Why Riak...", published_at: ".."}
 
-!SLIDE
+!SLIDE bullets incremental
 
 # Views - Values #
 
@@ -71,22 +71,27 @@
 
 # Map/Reduce #
 
-* Map emits the desired lookup keys
-* Reduce aggregates the results
+!SLIDE bullets incremental
+
+## Map erstellt Keys und Values ##
+
+!SLIDE
+
+## Reduce aggregiert Values ##
 
 !SLIDE 
 
-# Map Phase #
+# Map-Phase #
 
-## Find by Name ##
+## Titel als Key ##
 
     function(doc) {
-      emit(doc.name, doc);
+      emit(doc.title, doc);
     }
 
 !SLIDE javascript
 
-## Find by tag ##
+## Tags als Key ##
 
     function(doc) {
       for (var index in doc.tags) {
@@ -94,9 +99,13 @@
       }
     }
 
+!SLIDE
+
+## Beliebig viele Keys pro Dokument ##
+
 !SLIDE javascript small
 
-## Find by tag ##
+## Reduce-Phase für Tags ##
 
     function(keys, values, rereduce) {
       var sum = 0;
@@ -106,26 +115,20 @@
       return sum;
     }
 
-!SLIDE smaller
-
-## Querying Views ##
-
-    /jaoo/_design/conferences/_view/by_name?key="JAOO 2010"
-
 !SLIDE bullets incremental
 
 # Design Documents #
 
-* Collect map/reduce functions
-* Name convention: `_design/<document>`
-* Regular JSON document
+* Sammeln Map/Reduce-Funktionen
+* Namenskonvention: `_design/<document>`
+* JSON Dokument
 
 !SLIDE javascript small
 
 # Design Documents #
 
     {
-      "_id": "_design/conferences"
+      "_id": "_design/posts"
       "views": {
         "by_name": {
           "map": "function(doc)...",
@@ -134,10 +137,17 @@
       }
     }
 
+!SLIDE smaller
+
+## Views abfragen ##
+
+    /powerdays/_design/posts/_view/by_title?
+       key="Why Riak Search Matters..."
+
 !SLIDE bullets incremental
 
 # Views #
 
-* Are only updated on read
-* Are always read from disk
-* Are invalidated when design documents are updated
+* Update nur beim Abfragen
+* Lesen immer von Disk
+* Invalide wenn Design-Dokumente aktualisiert werden
