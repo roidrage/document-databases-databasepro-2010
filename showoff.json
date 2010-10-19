@@ -1,3 +1,8 @@
 {
-  "name": "Document Databases in der Cloud",
-  "sections": [ {"section": "01_intro"} ]}
+  "name": "Document-Databases in der Cloud",
+  "sections": [
+    {"section": "01_intro"},
+    {"section": "02_couchdb_und_das_web"},
+    {"section": "03_btree"}
+  ]
+}
