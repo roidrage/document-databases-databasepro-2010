@@ -4,6 +4,7 @@
     {"section": "01_intro"},
     {"section": "02_couchdb_und_das_web"},
     {"section": "03_btree"},
-    {"section": "04_localmost"}
+    {"section": "04_localmost"},
+    {"section": "05_wann_couchdb"}
   ]
 }
