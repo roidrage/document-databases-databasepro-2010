@@ -10,11 +10,14 @@
 
 # Der B-Tree #
 
-![B-Tree](btree.png)
 
 !SLIDE
 
 ## Alle Daten werden in einem B-Tree gespeichert. ##
+
+!SLIDE center
+
+![B-Tree](btree.png)
 
 !SLIDE
 

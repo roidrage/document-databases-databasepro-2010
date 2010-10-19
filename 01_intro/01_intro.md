@@ -17,8 +17,6 @@
 * Was sind Dokumente?
 * Was sind Document-Databases?
 * CouchDB
-* Riak
-
 
 !SLIDE center
 
@@ -91,6 +89,7 @@
 
 * Gutes Handling von Einzeldokumenten
 * Loses Schema
+* CouchDB, Riak, MongoDB, RavenDB
 
 !SLIDE center
 
@@ -112,6 +111,10 @@
         ]]>
       </content>
     </document>
+
+!SLIDE
+
+# XML-Datenbanken! #
 
 !SLIDE small javascript
 
